@@ -1,9 +1,12 @@
 const express = require('express');
 
 const app = express();
+app.use(express.json());//To say we're going to use json files
 
-app.get('/gondor', (req, res) => {
-    res.status(200).send('Gondor calls for aid!');
+const dataList = [];
+
+app.get('/data', (req, res) => {
+    res.status(200).send(dataList);
     return;
 });
 
