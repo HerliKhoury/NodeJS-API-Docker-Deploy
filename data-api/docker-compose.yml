@@ -6,6 +6,6 @@ services:
         environment:
           - POSTGRES_DB=db
           - POSTGRES_USER=Gandalf
-          - POSTGRES_PASSWORD=Middle Earth
+          - POSTGRES_PASSWORD=MiddleEarth
         ports:
           - '5432:5432'  
