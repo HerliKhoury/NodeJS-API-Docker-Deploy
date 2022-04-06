@@ -23,5 +23,15 @@ app.post('/data', (req, res) => {
 });
 
 app.listen({port:8080}, () => {
+
+    try{
+        sequelize.authenticate();
+        console.log('Conectado ao banco de dados!')
+    }catch(error){
+        console.log('Não foi possível se conectar ao banco de dados',
+        error
+        );
+    }
+
     console.log('Servidor rodando liso!');
 });
